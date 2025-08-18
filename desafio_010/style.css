@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "idroid";
+  src: url("pacote-projeto-d010/fontes/idroid.otf") format("opentype");
+}
+
+body {
+  background-color: #20c02585;
+  margin: 0;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: green;
+  background-image: linear-gradient(180deg, #20c025, #366b37);
+  padding: 50px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #329635;
+  font-weight: bolder;
+}
+
+a.link-branco:hover {
+  background-color: rgba(128, 128, 128, 0.377);
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+a.link-branco {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+a.clipe-link::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("pacote-projeto-d010/imagens/clipe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+#titulo-principal {
+  text-align: center;
+}
+
+#subtitulo-paragrafo {
+  width: 450px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#navegacao {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
+
+strong {
+  color: #329635;
+}
+
+main {
+  background-color: white;
+  width: 840px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.fonte-idroid-formatada {
+  font-family: "idroid", Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(90deg, #20c02559, white);
+  border-radius: 5px;
+  color: #2b412c;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#titulo-artigo {
+  background-color: white;
+  background-image: none;
+  font-size: 1.8em;
+}
+
+p {
+  text-align: justify;
+}
+
+.indentado {
+  text-indent: 30px;
+}
+
+#extra {
+  background-color: #20c0253f;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.308);
+}
+
+.conteudo {
+  background-color: #20c0253f;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#title-extra {
+  font-weight: bolder;
+  color: white;
+  background-color: #2b412c;
+  text-align: left;
+  padding: 5px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.minha-lista {
+  list-style-type: none;
+  padding-left: 0;
+  columns: 2;
+  text-align: justify;
+}
+
+li.marcador::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("pacote-projeto-d010/imagens/seta.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #366b37;
+  color: white;
+  width: 860px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1px 10px;
+}
