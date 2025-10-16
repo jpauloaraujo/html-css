@@ -1,67 +1,100 @@
 @charset "UTF-8";
 
-* {
-    margin: 0px;
-    padding: 0px;
+.passion-one-regular {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-html, body {
-    min-height: 100vh;
-    background-color: darkgrey;
+.passion-one-bold {
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.passion-one-black {
+  font-family: "Passion One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+  --fonte2: "Passion One", cursive;
+  --fonte3: "Sriracha", cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: darkgrey;
+  font-family: var(--fonte1);
 }
 
 header {
-    background-color: black;
-    color: white;
-    text-align: center;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
 header > h1 {
-    padding-top: 50px;
-    font-variant: small-caps;
+  padding-top: 50px;
+  font-variant: small-caps;
+  font-family: var(--fonte2);
 }
 
 header > p {
-    padding-bottom: 50px;
-    font-size: 20px;
+  padding-bottom: 50px;
+  font-size: 20px;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  line-height: 2em;
+  padding-left: 30px;
+  font-family: var(--fonte3);
 }
 
 section.normal {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 section.imagem {
-    background-color: rgb(77, 77, 77);
-    color: white;
+  background-color: rgb(77, 77, 77);
+  color: white;
 }
 
 section.imagem > p {
-    background-color: rgba(0, 0, 0, 0.329);
-    width: 400px;
+  background-color: rgba(0, 0, 0, 0.329);
+  width: 400px;
 }
 
 footer {
-    background-color: black;
-    text-align: center;
-    color: white;
-    padding: 10px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 10px;
 }
-
