@@ -1,37 +1,33 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Configuração do gráfico
-plt.figure(figsize=(6, 6))
+# Pontos aproximados para reproduzir a curva do gráfico
+tempo = np.array([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23])
+log_ufc = np.array([1.2, 1.3, 1.6, 3.0, 5.0, 7.2, 8.0, 8.2, 8.1, 7.8, 6.5, 5.0])
 
-# 1. Curva de Nível: x^2 + y^2 = 4 (Círculo raio 2)
-t = np.linspace(0, 2*np.pi, 100)
-x_circle = 2 * np.cos(t)
-y_circle = 2 * np.sin(t)
-plt.plot(x_circle, y_circle, label=r'Curva $x^2 + y^2 = 4$', color='blue')
+# Criação do gráfico
+plt.figure(figsize=(8, 5))
+plt.plot(tempo, log_ufc, color='black', linewidth=2)
 
-# Ponto dado: (sqrt(2), sqrt(2)) -> Aprox (1.41, 1.41)
-p_val = np.sqrt(2)
-plt.plot(p_val, p_val, 'go', label=r'Ponto $(\sqrt{2}, \sqrt{2})$')
+# Linhas verticais delimitando as fases
+plt.axvline(5, color='black', linewidth=1)
+plt.axvline(11, color='black', linewidth=1)
+plt.axvline(17, color='black', linewidth=1)
 
-# 2. Gradiente: (2*sqrt(2), 2*sqrt(2)) -> Aprox (2.82, 2.82)
-# Vamos escalar o vetor visualmente para ele não ficar enorme no gráfico, mantendo a direção.
-# O vetor real tem magnitude 4. Vamos desenhar com escala menor mas indicando que é o gradiente.
-plt.quiver(p_val, p_val, 2*p_val, 2*p_val, angles='xy', scale_units='xy', scale=1, color='red', label=r'Gradiente $\nabla f$')
+# Texto das fases
+plt.text(2.2, 3, 'FASE LAG', rotation=90, va='center')
+plt.text(7.5, 4.5, 'FASE\nEXPONENCIAL', rotation=90, va='center', ha='center')
+plt.text(13.5, 5.5, 'FASE\nESTACIONÁRIA', rotation=90, va='center', ha='center')
+plt.text(19.5, 4.5, 'FASE DE\nDECLÍNIO', rotation=90, va='center', ha='center')
 
-# 3. Reta Tangente: y = -x + 2*sqrt(2)
-x_line = np.linspace(-1, 4, 100)
-y_line = -x_line + 2*p_val
-plt.plot(x_line, y_line, '--', color='green', label='Reta Tangente')
+# Rótulos dos eixos
+plt.xlabel('tempo (horas)')
+plt.ylabel('log UFC/g')
 
-# Ajustes visuais
-plt.xlim(-3, 5)
-plt.ylim(-3, 5)
-plt.axhline(0, color='black', linewidth=0.5)
-plt.axvline(0, color='black', linewidth=0.5)
-plt.grid(True, linestyle='--', alpha=0.6)
-plt.legend(loc='lower left')
-plt.title(r'Exercício 25: $x^2+y^2=4$')
-plt.gca().set_aspect('equal', adjustable='box')
+# Limites e grade
+plt.xlim(1, 23)
+plt.ylim(0, 9)
+plt.grid(False)
 
+plt.tight_layout()
 plt.show()
