@@ -99,7 +99,7 @@ int main() {
     }
 
     printf("Total recebido: R$ %.2f\n", total);
-    printf("Quantidade em dinheiro: %d\n", qtdDinheiro);
+    printf("Quantidade em dinheiarao: %d\n", qtdDinheiro);
     printf("Quantidade no cartao: %d\n", qtdCartao);
     printf("Quantidade no pix: %d\n", qtdPix);
 
