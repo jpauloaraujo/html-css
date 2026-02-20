@@ -17,7 +17,7 @@ plt.axvline(17, color='black', linewidth=1)
 # Texto das fases
 plt.text(2.2, 3, 'FASE LAG', rotation=90, va='center')
 plt.text(7.5, 4.5, 'FASE\nEXPONENCAL', rotation=90, va='center', ha='center')
-plt.text(13.5, 5.5, 'FASE\nESTACIONÁ', rotation=90, va='center', ha='center')
+plt.text(13.5, 5.5, 'FASE\nESTACIONÁa', rotation=90, va='center', ha='center')
 plt.text(19.5, 4.5, 'FASE DE\nDECLÍNIO', rotation=90, va='center', ha='center')
 
 # Rótulos dos eixos
