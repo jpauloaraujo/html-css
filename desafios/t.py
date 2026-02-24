@@ -24,7 +24,7 @@ plt.text(19.5, 4.5, 'FASE DE\nDECLÍNIO', rotation=90, va='center', ha='center')
 plt.xlabel('tempo (horas)')
 plt.ylabel('log UFC/g')
 
-# Limites e grad
+# Limites e grade
 plt.xlim(1, 23)
 plt.ylim(0, 9)
 plt.grid(False)
