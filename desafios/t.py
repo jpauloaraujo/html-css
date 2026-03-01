@@ -22,7 +22,7 @@ plt.text(19.5, 4.5, 'FASE DE\nDECLÍNIO', rotation=90, va='center', ha='center')
 
 # Rótulos dos eixos
 plt.xlabel('tempo (horas)')
-plt.ylabel('log UFC/ggg)
+plt.ylabel('log UFC/gg)
 
 # Limites e grad
 plt.xlim(1, 23)
